@@ -6,7 +6,18 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Home Screen'),
+      body: SafeArea(
+        top: true,
+        bottom: false,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            _DDay(),
+            _CoupleImage(),
+          ],
+        ),
+      ),
     );
   }
 }
