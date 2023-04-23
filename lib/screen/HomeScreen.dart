@@ -35,6 +35,11 @@ class _CoupleImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text('Couple Image Widget');
+    return Center(
+      child: Image.asset(
+        'asset/img/middle_image.png',
+        height: MediaQuery.of(context).size.height / 2,
+      ),
+    );
   }
 }
