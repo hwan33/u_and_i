@@ -24,15 +24,47 @@ class HomeScreen extends StatelessWidget {
 }
 
 class _DDay extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-    return Text('DDay Widget');
+    return Column(
+      children: [
+        const SizedBox(
+          height: 16.0,
+        ),
+        Text(
+          'U&I',
+        ),
+        const SizedBox(
+          height: 16.0,
+        ),
+        Text(
+          '우리 처음 만난 날',
+        ),
+        Text(
+          '2021.11.24',
+        ),
+        const SizedBox(
+          height: 16.0,
+        ),
+        IconButton(
+          iconSize: 60.0,
+          onPressed: () {},
+          icon: Icon(
+            Icons.favorite,
+          ),
+        ),
+        const SizedBox(
+          height: 16.0,
+        ),
+        Text(
+          'D+365',
+        ),
+      ],
+    );
   }
 }
 
 class _CoupleImage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Center(
