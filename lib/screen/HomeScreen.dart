@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
+
+  @override
+  State<StatefulWidget> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +32,9 @@ class HomeScreen extends StatelessWidget {
 class _DDay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
+    final textTheme = Theme
+        .of(context)
+        .textTheme;
 
     return Column(
       children: [
@@ -78,7 +86,10 @@ class _CoupleImage extends StatelessWidget {
       child: Center(
         child: Image.asset(
           'asset/img/middle_image.png',
-          height: MediaQuery.of(context).size.height / 2,
+          height: MediaQuery
+              .of(context)
+              .size
+              .height / 2,
         ),
       ),
     );
