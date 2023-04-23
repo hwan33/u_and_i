@@ -21,21 +21,31 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            _DDay(),
+            _DDay(
+              onHeartPressed: onHeartPressed,
+            ),
             _CoupleImage(),
           ],
         ),
       ),
     );
   }
+
+  void onHeartPressed() {
+    print('클릭');
+  }
 }
 
 class _DDay extends StatelessWidget {
+  final GestureTapCallback onHeartPressed;
+
+  _DDay({
+    required this.onHeartPressed,
+  });
+
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme
-        .of(context)
-        .textTheme;
+    final textTheme = Theme.of(context).textTheme;
 
     return Column(
       children: [
@@ -62,7 +72,7 @@ class _DDay extends StatelessWidget {
         ),
         IconButton(
           iconSize: 60.0,
-          onPressed: () {},
+          onPressed: onHeartPressed,
           icon: Icon(
             Icons.favorite,
             color: Colors.red,
@@ -87,10 +97,7 @@ class _CoupleImage extends StatelessWidget {
       child: Center(
         child: Image.asset(
           'asset/img/middle_image.png',
-          height: MediaQuery
-              .of(context)
-              .size
-              .height / 2,
+          height: MediaQuery.of(context).size.height / 2,
         ),
       ),
     );
